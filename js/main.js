@@ -67,6 +67,15 @@ $(document).ready(function() {
 		 	$(this).parent().parent().show();
 
 		 });
+
+		 $StudentsToShow.each(function(index) {
+		var $StudentParent = $(this).parents('.student-item');
+		if (index < 10) {
+			$StudentParent.show();
+		} else {
+			$StudentParent.hide();
+		}
+	});
 		 //appends li items to the bottom
 		 for (var i = 0; i < Math.ceil($StudentsToShow.length / 10); i++) {
 			
